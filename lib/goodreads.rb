@@ -2,6 +2,10 @@ require "goodreads/version"
 require "goodreads/errors"
 require "goodreads/request"
 require "goodreads/client"
+require 'hashie'
+# https://github.com/intridea/hashie/issues/391#issuecomment-276490533
+Hashie.logger = Logger.new(nil)
+
 
 module Goodreads
   class << self
